@@ -8,6 +8,10 @@ import Animated, {
 import React, { useEffect, useState } from "react";
 import { Colors } from "@/constants/Colors";
 import TabBarButton from "./TabBarButton";
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
 
 export function TabBar({ state, descriptors, navigation }: BottomTabBarProps) {
   const [dimensions, setDimensions] = useState({ height: 20, width: 100 });
@@ -104,9 +108,9 @@ const styles = StyleSheet.create({
   focusedStyle: {
     position: "absolute",
     backgroundColor: Colors.tint,
-    top: 5,
+    top: 5, //top: 5,
     bottom: 5,
-    left: 77,
+    left: "18%", //left: 77,
     borderRadius: 100,
     height: "100%",
     width: 60,
@@ -116,7 +120,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.tint,
     top: 5,
     bottom: 5,
-    left: 170,
+    left: "21.3%",
     borderRadius: 100,
     height: "100%",
     width: 60,

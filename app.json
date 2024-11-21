@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "fintech-app",
+    "name": "Xillion",
     "slug": "fintech-app",
     "version": "1.0.0",
-    "orientation": "default",
+    "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
@@ -26,6 +26,7 @@
     },
     "plugins": [
       "expo-router",
+      "expo-av",
       [
         "expo-splash-screen",
         {

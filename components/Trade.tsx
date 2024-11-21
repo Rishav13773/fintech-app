@@ -67,7 +67,7 @@ export default Trade;
 
 const styles = StyleSheet.create({
   tradeContainer: {
-    height: hp(`40%`),
+    height: hp(`33%`),
     backgroundColor: "#4F545E",
     borderRadius: 35,
     marginHorizontal: 10,

@@ -1,4 +1,6 @@
 export const Colors = {
+  heroSectionGradient_1: "#C525FF",
+  heroSectionGradient_2: "#391EDC",
   background: "#F4F4F4",
   tint: "#C426FF",
   tabIconDefault: "#687076",
@@ -8,4 +10,7 @@ export const Colors = {
   darkGrey: "#666",
   lightGrey: "#999",
   softText: "#555",
+  tradeScreenBackground: "#F8F8F8",
+  tradeItemGradient_1: "#dddae6",
+  tradeItemGradient_2: "#c6b8f5",
 };

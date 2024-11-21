@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { StyleSheet } from "react-native";
-
+import { Audio } from "expo-av";
 import LinearGradient from "react-native-linear-gradient";
 import { PanGestureHandler } from "react-native-gesture-handler";
 import Animated, {
@@ -14,7 +14,7 @@ import Animated, {
   runOnJS,
 } from "react-native-reanimated";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { useRouter, useFocusEffect } from "expo-router"; // Updated import for `useFocusEffect`
+import { useRouter, useFocusEffect } from "expo-router";
 
 const BUTTON_WIDTH = 350;
 const BUTTON_HEIGHT = 70;
@@ -32,15 +32,37 @@ const AnimatedButton = ({ onToggle }: any) => {
   const X = useSharedValue(0);
   // Toggled State
   const [toggled, setToggled] = useState(false);
+  const [sound, setSound] = useState<Audio.Sound | null>(null);
 
-  // Fires when animation ends
-  const handleComplete = (isToggled: any) => {
+  const handleComplete = async (isToggled: boolean) => {
     if (isToggled !== toggled) {
       setToggled(isToggled);
       onToggle(isToggled);
+
+      // Play sound on completion
+      if (isToggled) {
+        await playSound();
+      }
     }
   };
 
+  const playSound = async () => {
+    const { sound } = await Audio.Sound.createAsync(
+      require("@/assets/sounds/btnSwish.mp3")
+    );
+    setSound(sound);
+    await sound.playAsync();
+  };
+
+  useEffect(() => {
+    return sound
+      ? () => {
+          sound.unloadAsync(); // Unload sound when component unmounts
+        }
+      : undefined;
+  }, [sound]);
+
+  // Pushing to trade screen on btn swipe
   useEffect(() => {
     if (toggled) {
       router.push("/trade");

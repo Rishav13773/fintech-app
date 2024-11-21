@@ -24,7 +24,6 @@ export default function HomeScreen() {
   const isTablet = width >= 768; // tablet screen width
 
   const [toggleState, setToggleState] = useState(false);
-
   const handleToggle = (value: any) => setToggleState(value);
 
   return (
@@ -57,20 +56,20 @@ export default function HomeScreen() {
           <Text style={styles.portfolioUnusedFunds}>Unused funds</Text>
           <Text style={styles.portfolioUnusedAmount}>₹1,18,261</Text>
         </View>
-      </LinearGradient>
 
-      {/* Helpers Button */}
-      <View
-        style={[
-          styles.helperContainer,
-          isTablet ? styles.tabletHelperContainer : styles.helperContainer,
-        ]}
-      >
-        <View style={styles.buttonContainer}>
-          <CustomButton iconName="download-outline" title="Portfolio" />
-          <CustomButton iconName="chatbox" title="Ask AI" />
+        {/* Helpers Button */}
+        <View
+          style={[
+            styles.helperContainer,
+            isTablet ? styles.tabletHelperContainer : styles.helperContainer,
+          ]}
+        >
+          <View style={styles.buttonContainer}>
+            <CustomButton iconName="download-outline" title="Portfolio" />
+            <CustomButton iconName="chatbox" title="Ask AI" />
+          </View>
         </View>
-      </View>
+      </LinearGradient>
 
       {/* Footer Section */}
       <View style={styles.footerSection}>
@@ -163,8 +162,8 @@ const styles = StyleSheet.create({
   },
 
   helperContainer: {
-    position: "absolute",
-    top: hp(`33`), // Align with the end of the heroSection
+    // position: "absolute",
+    top: hp(`6`),
     width: "100%",
     justifyContent: "center",
     alignItems: "center",
@@ -172,7 +171,7 @@ const styles = StyleSheet.create({
   },
 
   tabletHelperContainer: {
-    top: hp(`29`),
+    top: hp(`8`),
   },
 
   buttonContainer: {

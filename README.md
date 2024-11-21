@@ -1,4 +1,4 @@
-# Welcome to your Expo app 👋
+# Xillion assignment 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
@@ -25,26 +25,16 @@ In the output, you'll find options to open the app in a
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Get a fresh project
+## Animated button (Home screen)
 
-When you're ready, run:
+- Used react-native-reanimation to animated the execute button swipe gesture
 
-```bash
-npm run reset-project
-```
+- Repo which I followed to create the button -> https://github.com/funcsio/react-native-swipe-button-tutorial/blob/main/SwipeButton.js
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- Added Custom swipe sound when button is swiped.
 
-## Learn more
+## Trade Screen
 
-To learn more about developing your project with Expo, look at the following resources:
+- For the trade screen i have taken inpiration from a transaction history screen, i have used the gradient colors which was provided in the instruction to create a contrast between tab bar and header section the screen
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- link to dribble ui design - https://dribbble.com/shots/23999997-Transactions-Management-App-for-Merchants

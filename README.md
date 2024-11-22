@@ -38,3 +38,5 @@ You can start developing by editing the files inside the **app** directory. This
 - For the trade screen i have taken inpiration from a transaction history screen, i have used the gradient colors which was provided in the instruction to create a contrast between tab bar and header section the screen
 
 - link to dribble ui design - https://dribbble.com/shots/23999997-Transactions-Management-App-for-Merchants
+
+#### Video link - https://drive.google.com/file/d/1YZRzhzXK4YqcNAHveHI0kNS_kIj8rQ6E/view?usp=sharing
